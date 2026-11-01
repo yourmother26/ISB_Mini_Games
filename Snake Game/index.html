@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>ISB Snake Feast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <button id="muteBtn" title="Sound on / off">🔊</button>
+  <div id="vignette"></div>
+
+  <!-- In-game screen -->
+  <div id="hud" class="hidden">
+    <button id="quitBtn">✕ Quit</button>
+    <div id="leaderboard"></div>
+    <div id="joy"><div id="joyKnob"></div></div>
+    <div id="boostWrap"><button id="boost">⚡</button></div>
+    <div id="countdown"></div>
+  </div>
+
+  <!-- Home screen -->
+  <div id="home">
+    <div class="home-inner">
+      <div class="logo-small">ISB</div>
+      <h1>SNAKE <span>FEAST</span></h1>
+      <p class="sub">Eat. Grow. Take over the arena.</p>
+
+      <div id="banner" class="hidden"></div>
+
+      <input id="nameInput" maxlength="14" placeholder="Your nickname" autocomplete="off">
+      <div id="bestLine"></div>
+
+      <div id="modeGrid"></div>
+
+      <div class="btn-row">
+        <button id="playBtn">▶ PLAY</button>
+        <button id="infoBtn">How to play</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions pop-up -->
+  <div id="modal" class="hidden">
+    <div class="modal-box">
+      <h2 id="modalTitle"></h2>
+      <ol id="modalList"></ol>
+      <button id="modalClose">Got it</button>
+    </div>
+  </div>
+
+  <!-- Level complete / eliminated pop-up -->
+  <div id="overlay" class="hidden">
+    <div class="modal-box">
+      <h2 id="ovTitle"></h2>
+      <p id="ovText"></p>
+      <div id="ovBtns"></div>
+    </div>
+  </div>
+
+  <!-- Load order matters: storage → modes → audio → game → menu -->
+  <script src="storage.js"></script>
+  <script src="modes.js"></script>
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
