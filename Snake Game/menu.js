@@ -5,6 +5,12 @@
   const playBtn = $('playBtn'), bestLine = $('bestLine'), banner = $('banner');
   const modal = $('modal'), overlay = $('overlay');
 
+  // Keep the mute button below Quit only while the in-game HUD is visible.
+  const hud = $('hud');
+  const syncGameLayout = () => document.body.classList.toggle('in-game', !hud.classList.contains('hidden'));
+  new MutationObserver(syncGameLayout).observe(hud, { attributes: true, attributeFilter: ['class'] });
+  syncGameLayout();
+
   let selected = ISB.store.get('mode', 'normal');
   if (!ISB.MODES.some(m => m.id === selected)) selected = 'normal';
 
