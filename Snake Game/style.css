@@ -146,7 +146,7 @@ h1 span {
 
 /* analog stick (left) */
 #joy {
-  position: fixed; left: 22px; bottom: calc(30px + env(safe-area-inset-bottom, 0px)); z-index: 5;
+  position: fixed; left: 22px; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); z-index: 5;
   width: 128px; height: 128px; border-radius: 50%; touch-action: none;
   background: radial-gradient(circle, rgba(30,144,255,.12), rgba(30,144,255,.28));
   border: 2px solid rgba(30,144,255,.6); box-shadow: 0 0 18px rgba(30,144,255,.35);
@@ -199,7 +199,8 @@ h1 span {
 
 /* sound on / off */
 #muteBtn {
-  position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 40;
+  position: fixed; left: 10px; top: calc(10px + env(safe-area-inset-top, 0px)); z-index: 40;      /* home screen: top-left corner */
   width: 42px; height: 42px; border-radius: 50%; font-size: 20px; line-height: 1;
   color: #fff; background: rgba(17,17,17,.7); border: 1px solid rgba(30,144,255,.6); box-shadow: 0 0 12px rgba(30,144,255,.3);
 }
+body.in-game #muteBtn { top: calc(54px + env(safe-area-inset-top, 0px)); }      /* in a game: just below the Quit button */
