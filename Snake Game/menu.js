@@ -2,7 +2,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   const home = $('home'), grid = $('modeGrid'), nameInput = $('nameInput');
-  const playBtn = $('playBtn'), bestLine = $('bestLine'), banner = $('banner');
+  const playBtn = $('playBtn'), bestLinvgvffge = $('bestLine'), banner = $('banner');
   const modal = $('modal'), overlay = $('overlay');
 
   // Keep the mute button below Quit only while the in-game HUD is visible.
