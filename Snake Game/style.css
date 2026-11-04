@@ -30,6 +30,23 @@ html, body {
 }
 
 /* ---------------- HOME ---------------- */
+#returnStoreBtn {
+  position: fixed;
+  top: calc(12px + env(safe-area-inset-top, 0px));
+  right: 12px;
+  z-index: 20;
+  padding: 10px 13px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background: rgba(9, 9, 9, .92);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 0 14px rgba(30,144,255,.28);
+  cursor: pointer;
+}
+#returnStoreBtn:active { transform: scale(.97); }
+
 #home {
   position: fixed; inset: 0; z-index: 10; overflow-y: auto;
   background: radial-gradient(circle at 50% 0%, rgba(30,144,255,.25), rgba(9,9,9,.92) 60%);
