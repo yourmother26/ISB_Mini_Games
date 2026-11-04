@@ -4,6 +4,13 @@
   const home = $('home'), grid = $('modeGrid'), nameInput = $('nameInput');
   const playBtn = $('playBtn'), bestLine = $('bestLine'), banner = $('banner');
   const modal = $('modal'), overlay = $('overlay');
+  const returnStoreBtn = $('returnStoreBtn');
+
+  // The game is opened by ISB Store with location.assign(), so browser
+  // history returns to the Mini-Games page without guessing a URL.
+  returnStoreBtn.addEventListener('click', () => {
+    if (window.history.length > 1) window.history.back();
+  });
 
   // Keep the mute button below Quit only while the in-game HUD is visible.
   const hud = $('hud');
